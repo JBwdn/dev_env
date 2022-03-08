@@ -1,6 +1,3 @@
-sudo apt-get update
-sudo apt-get install -y zsh neovim tmux peco
-
 # Zsh manager install:
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" --unattended
 cd ~/ 

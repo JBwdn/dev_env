@@ -1,4 +1,4 @@
-# General Vagrant ubuntu focal64 dev environment
+# Ubuntu-focal64 dev environment for Python
 
 Features
 - Zsh
@@ -7,7 +7,8 @@ Features
 - miniconda
 
 To Add:
-- Base conda packages
+- jupyter notebook
+- nextflow
 - GPU passthrough
 - Docker + compose
 - vscode server
@@ -15,7 +16,7 @@ To Add:
 
 Setup:
 1. Install Virtualbox and Vagrant
-2. Create folder `dev` and download `Vagrantfile`
+2. Create folder `dev` and download `Vagrantfile` and `bootstrap.sh`
         - `wget https://raw.githubusercontent.com/JBwdn/dev_env/master/Vagrantfile -O Vagrantfile`
 3. Run `vagrant up` from inside `dev`
 4. Connect using `vagrant ssh` inside `dev` 
