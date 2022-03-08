@@ -10,13 +10,17 @@ Vagrant.configure("2") do |config|
     vb.cpus = "2"
   end
 
-  config.ssh.username = "jb"
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
     apt-get install -y zsh neovim tmux peco
 
-    # Zsh manager:
-    sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+    # Zsh manager install:
+    sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" -y #??
+    cd ~/ 
+    # Fetch remote config files:
+    wget https://raw.githubusercontent.com/JBwdn/dev_env/master/zshrc -O ~/.zshrc
+    mkdir -p ~/.config/nvim
+    wget https://raw.githubusercontent.com/JBwdn/dev_env/master/init.vim -O ~/.config/nvim/init.vim
 
     # Miniconda setup:
     mkdir -p ~/miniconda3

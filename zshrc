@@ -28,4 +28,4 @@ function coa(){
 conda activate $(conda env list | tail -n +3 | awk '{print $1;}' | peco --prompt 'Conda Activate:')
 }
 alias cod="conda deactivate"
-alias cos="conda deavtivate; coa
+alias cos="conda deavtivate; coa"
