@@ -10,7 +10,8 @@ Vagrant.configure("2") do |config|
     vb.cpus = "2"
   end
 
-  config.vm.provision "shell", inline: <<-SHELL
-    runuser -l vagrant 'setup.sh'
-    SHELL
+  config.vm.provision "shell", inline: "sudo apt-get update"
+  config.vm.provision "shell", inline: "sudo apt-get install -y zsh neovim tmux peco"
+  config.vm.provision "shell", inline: "chsh -s /bin/zsh vagrant"
+  config.vm.provision "shell", privileged: false, path:"bootstrap.sh"
 end

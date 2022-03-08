@@ -7,6 +7,7 @@ Features
 - miniconda
 
 To Add:
+- Base conda packages
 - GPU passthrough
 - Docker + compose
 - vscode server
@@ -15,5 +16,6 @@ To Add:
 Setup:
 1. Install Virtualbox and Vagrant
 2. Create folder `dev` and download `Vagrantfile`
+        - `wget https://raw.githubusercontent.com/JBwdn/dev_env/master/Vagrantfile -O Vagrantfile`
 3. Run `vagrant up` from inside `dev`
-4. Connect using `vagrant ssh` inside `dev`
+4. Connect using `vagrant ssh` inside `dev` 
